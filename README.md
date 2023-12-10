@@ -4,6 +4,14 @@
 
 The Frontend Service allows users to access pages to interact with the system. Users can log in to the application, select products to place an order, check the order summary, and modify the order if needed.
 
+## Architecture Diagram
+
+![img.png](architecture.png)
+
+## Database Diagram
+
+![img.png](database.png)
+
 ## Technologies
 
 - Java 17 with Spring Boot
