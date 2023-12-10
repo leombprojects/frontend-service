@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: frontend-service
+  profiles:
+    active: dev

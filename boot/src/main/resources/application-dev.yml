@@ -1,0 +1,35 @@
+logging.level:
+  org.leombprojects: DEBUG
+  feign: debug
+
+server:
+  port: 8080
+
+spring:
+  thymeleaf:
+    cache: false
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            loggerLevel: full
+
+clients:
+  auth:
+    base-url: https://login.microsoftonline.com/a91a2f57-6dc8-49e3-88c6-9b4fe941dbfd
+    token-path: /oauth2/token
+    client-id: 07178ce9-1207-471b-96ce-b79a4e3122d3
+    client-secret: WTT8Q~unj.AlhuXFI7hsz3FEkC12NQ08LfBQmcT4
+    scope: https://graph.microsoft.com/.default
+    grant_type: client_credentials
+  user-service:
+    base-url: http://localhost:8090/user-service/user
+    validate-path: /validate
+  product-service:
+    base-url: http://localhost:8092/product-service/product
+    list-path: /list/{course}
+  order-service:
+    base-url: http://localhost:8091/order-service/order
+    create-path: /create
+    update-path: /update
