@@ -27,6 +27,7 @@ public class ProductController {
         List<Product> startersList = productService.listProduct("STARTERS");
         List<Product> drinksList = productService.listProduct("DRINKS");
 
+        model.addAttribute("username", contextService.getUsername());
         model.addAttribute("mainsList", mainsList);
         model.addAttribute("startersList", startersList);
         model.addAttribute("drinksList", drinksList);
